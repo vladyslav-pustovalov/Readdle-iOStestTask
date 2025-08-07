@@ -214,6 +214,11 @@
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = "Cultured Code";
+				TargetAttributes = {
+					36CF558916DD7EAE0028A8D1 = {
+						DevelopmentTeam = JFR96C4RKL;
+					};
+				};
 			};
 			buildConfigurationList = 36CF558416DD7EAE0028A8D1 /* Build configuration list for PBXProject "Tasks" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -370,6 +375,7 @@
 		36CF55A916DD7EAE0028A8D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = JFR96C4RKL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tasks/Tasks-Prefix.pch";
 				INFOPLIST_FILE = "Tasks/Tasks-Info.plist";
@@ -383,6 +389,7 @@
 		36CF55AA16DD7EAE0028A8D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = JFR96C4RKL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tasks/Tasks-Prefix.pch";
 				INFOPLIST_FILE = "Tasks/Tasks-Info.plist";
