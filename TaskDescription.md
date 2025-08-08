@@ -47,8 +47,14 @@ Please reachout Oksana (otolstykh@readdle.com) if you have any questions.
 - Perform login with empty password field
 - Perform login with invalid credentials
 
-- Perform logout from the main screen
-- Perform logout from the subtask screen
+- Perform logout from the main screen with logout
+- Perform logout from the main screen with cancel
+- Perform logout from the subtask screen with logout
+- Perform logout from the subtask screen with cancel
+
+- Perform Retry when error login is shown and credentials was valid
+- Perform Retry when error login is shown and credentials was invalid
+- Perform Cancle when error login is shown
 
 - Navigate to the subpask screen
 - Navigate from the subtask to the main screen
@@ -57,13 +63,15 @@ Please reachout Oksana (otolstykh@readdle.com) if you have any questions.
 - Cancel a completed task without subtasts
 - Compleme an uncompleted task with subtasts
 - Cancel a completed task with subtasts
-- Complete all tasks
+- Complete all tasks when non tasks are completed
+- Complete all tasks when some tasks are completed
 - Cancel all tasks when all tasks are completed
 - Cancel all tasks when tasks are partially completed
 
 - Compleme an uncompleted subtask
 - Cancel a completed subtask
 - Complete all subtasks
+- Cancel one subtaks when all subtasks are completed
 - Cancel all subtasks when all subtasks are completed
 - Cancel all subtasks when subtasks are partially completed
 
@@ -77,4 +85,13 @@ Please reachout Oksana (otolstykh@readdle.com) if you have any questions.
 
 # LIST OF DISCOVERED ISSUES:
 // Only summaries of bug reports: e.g.
-- Login can be performed with empty password field (not a real issue)
+
+- The error login is shown randomly when a user logins with valid credentials
+- The login with valid credentials happens from the second Retry when the error login is shown
+- Navigation to the subtask screen is not happened when a user clicks on the navigation arrow on the right from the info sign
+- Subtasks are not canceled when not all the tasks are completed and a user clicks on the Canclel All button
+- The button Cancel All is not changed to Complete All when all tasks are completed and a user cancels some task
+- The button Complete All is not changed to Cancel All when a user completes all tasks manually
+- The button Cancel All is not changed to Complete All when all subtasks are completed and a user cancels some subtask
+- The button Complete All is not changed to Cancel All when a user completes all subtasks manually
+- The button Cancel All is not shown when a user navigates to the subtask screen of the completed task
