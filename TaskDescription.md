@@ -29,7 +29,8 @@ Please reachout Oksana (otolstykh@readdle.com) if you have any questions.
     - iPhones with different screen sizes: usuall, Max, mini, SE (newer and older)
     - iPhones with different supported iOS versions 
     Devices with diffrent screens and OS versions can be mixed for not having the same tests on all the devices.
-    In info.plist file I see that there is no iPad support, if it's according to the requirements - we shouldn't test it on the iPad. If the app should be on the iPad - we should test it with the same approach.
+    iPad - with the same approach as on iPhones (default, mini, usuall Pro size and bigger Pro size (or Airs)).
+    - Portrain and Landscape orientation
     
 - What parts of app will be tested:
     - Functional part
@@ -42,7 +43,8 @@ Please reachout Oksana (otolstykh@readdle.com) if you have any questions.
 # LIST OF TEST CASES: 
 // Only summaries of tests: e.g. 
 
-- Perform login with valid credentials
+- Perform login with valid email and password
+- Perform login with email without @
 - Perform login with empty login and password
 - Perform login with empty password field
 - Perform login with invalid credentials
@@ -86,8 +88,9 @@ Please reachout Oksana (otolstykh@readdle.com) if you have any questions.
 # LIST OF DISCOVERED ISSUES:
 // Only summaries of bug reports: e.g.
 
-- The error login is shown randomly when a user logins with valid credentials
-- The login with valid credentials happens from the second Retry when the error login is shown
+- The error login is shown randomly when a user logins with valid credentials (try to login and logout a few times with the same credentials)
+- The Retry login with valid credentials is not happened randomly when the login error alert is shown and a user retries to login (try to repeat retry a few times when the login error is shown)
+- The login is successful when the dns label is longer than 63 characters but there is another label after dot that is shorter (FE test@comw.longtestemalongtestemalongtestemalongtestemalongtestemalongtaaaa.com)
 - Navigation to the subtask screen is not happened when a user clicks on the navigation arrow on the right from the info sign
 - Subtasks are not canceled when not all the tasks are completed and a user clicks on the Canclel All button
 - The button Cancel All is not changed to Complete All when all tasks are completed and a user cancels some task
@@ -95,3 +98,15 @@ Please reachout Oksana (otolstykh@readdle.com) if you have any questions.
 - The button Cancel All is not changed to Complete All when all subtasks are completed and a user cancels some subtask
 - The button Complete All is not changed to Cancel All when a user completes all subtasks manually
 - The button Cancel All is not shown when a user navigates to the subtask screen of the completed task
+- The previous Taks is clicked randomly when a user clicks the task (try to click a few times on the same task)
+- All tasks checkboxes are not checked randomly when a user clicks on the Complete All button on the main screen (try to click a few times on the Complete All button)
+- Complete All button is not changed to the Cancel All button randomly when a user clicks on Complete All button on the main screen (try to click a few times on the Complete All button)
+- All subtasks checkboxes are not checked randomly when a user clicks on the Complete All button on the subtaskts screen (try to click a few times on the Complete All button)
+- Complete All button is not changed to the Cancel All button randomly when a user clicks on Complete All button on the subtask screen (try to click a few times on the Complete All button)
+- Taks are NOT sorted by name randomly when a user clicks on the Sort by Name button on the main screen (try to click a few times on the Sort by Name button)
+- Taks are set completed randomly when a user clicks on the Sort by Name button on the main screen (try to click a few times on the Sort by Name button)
+- Subtaks are NOT sorted by name randomly when a user clicks on the Sort by Name button on the subtask screen (try to click a few times on the Sort by Name button)
+- Subtasks are set completed randomly when a user clicks on the Sort by Name button on the subtask screen (try to click a few times on the Sort by Name button)
+- Task and its subtasks completion state are not synced randomly when a user completes the task with subtasks (try to click a few times on the same task with subtasks)
+- Tasks name has black color in the dark mode randomly (try to relogin to the app in the dark mode a few times)
+- Checkboxes are has black color in the dark mode (are not seen at all)
