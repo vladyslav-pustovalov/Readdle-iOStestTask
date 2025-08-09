@@ -5,7 +5,9 @@
 ## For handling opening project in JetBrain's IDEs
 .idea
 
-## User settings
+# Xcode user-specific settings
+*.xcuserstate
+*.xccheckout
 xcuserdata/
 
 ## Obj-C/Swift specific
@@ -65,5 +67,3 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 
 .DS_Store
-Tasks.xcodeproj/xcuserdata/
-Tasks.xcodeproj/xcshareddata/xcschemes/
