@@ -65,3 +65,5 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 
 .DS_Store
+Tasks.xcodeproj/xcuserdata/
+Tasks.xcodeproj/xcshareddata/xcschemes/
