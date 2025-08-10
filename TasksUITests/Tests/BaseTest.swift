@@ -9,8 +9,8 @@
 import XCTest
 
 class BaseTest: XCTestCase {
-     let app = XCUIApplication()
-
+    let app = XCUIApplication()
+    
     override func setUpWithError() throws {
         continueAfterFailure = false
         app.launch()
