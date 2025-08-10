@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "11A2BCFE-DA6E-49F1-AAED-4834A2CE706B",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Tasks.xcodeproj",
+        "identifier" : "C96D9E8E2E4795560091BDAA",
+        "name" : "TasksUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
