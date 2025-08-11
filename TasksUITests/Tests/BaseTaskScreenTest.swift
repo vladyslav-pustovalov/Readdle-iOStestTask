@@ -18,6 +18,7 @@ class BaseTaskScreenTest: BaseTest {
             .typeEmail("test@mm.cc")
             .typePassword("1")
             .login()
+            .autoNavigateToTasksScreen()
             .assertScreenIsShown()
     }
 }

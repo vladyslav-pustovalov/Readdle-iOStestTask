@@ -16,16 +16,21 @@ final class LoginTests: BaseTest {
     func test_LoginWithValidCredentialsIsSuccessful() {
         LoginScreen()
             .typeEmail(validEmail)
+            .assertLoginButtonIsDisabled()
             .typePassword(validPassword)
             .assetLoginButtonIsEnabled()
             .login()
+            .assertLogingProgressLabelIsShown()
+            .assertLogingProgressIndicatorIsShown()
+            .autoNavigateToTasksScreen()
             .assertScreenIsShown()
     }
     
     func test_LoginWithInvalidEmailShowsAlert() {
         LoginScreen()
-            .typeEmail(emailWithoutAt)
             .typePassword(validPassword)
+            .assertLoginButtonIsDisabled()
+            .typeEmail(emailWithoutAt)
             .assetLoginButtonIsEnabled()
             .login()
         

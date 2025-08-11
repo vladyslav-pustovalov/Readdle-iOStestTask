@@ -24,7 +24,7 @@ extension LoginCredentialsValidationAlertScreen {
     }
 }
 
-// MARK: = Assertions
+// MARK: - Assertions
 extension LoginCredentialsValidationAlertScreen {
     
     @discardableResult

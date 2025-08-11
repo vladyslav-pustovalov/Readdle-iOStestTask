@@ -34,13 +34,13 @@ extension LoginScreen {
     }
     
     @discardableResult
-    func login() -> TasksScreen {
+    func login() -> LoginProgressScreen {
         loginButton.tap()
-        return TasksScreen()
+        return LoginProgressScreen()
     }
 }
 
-// MARK: = Assertions
+// MARK: - Assertions
 extension LoginScreen {
     
     @discardableResult
@@ -51,7 +51,13 @@ extension LoginScreen {
     
     @discardableResult
     func assetLoginButtonIsEnabled() -> Self {
-        XCTAssertTrue(loginButton.element.isEnabled, "Login Button is NOT enabled")
+        XCTAssertTrue(loginButton.element.isEnabled, "Login Button is NOT enabled but should be")
+        return self
+    }
+    
+    @discardableResult
+    func assertLoginButtonIsDisabled() -> Self {
+        XCTAssertFalse(loginButton.element.isEnabled, "Login button is enabled but should NOT")
         return self
     }
 }

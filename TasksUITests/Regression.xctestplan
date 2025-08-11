@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "11A2BCFE-DA6E-49F1-AAED-4834A2CE706B",
+      "id" : "B138C80E-C64D-4F10-89CF-39380FF95FA4",
       "name" : "Configuration 1",
       "options" : {
 
@@ -9,10 +9,15 @@
     }
   ],
   "defaultOptions" : {
+    "testExecutionOrdering" : "random",
     "testTimeoutsEnabled" : true
   },
   "testTargets" : [
     {
+      "skippedTests" : [
+        "BaseTaskScreenTest",
+        "BaseTest"
+      ],
       "target" : {
         "containerPath" : "container:Tasks.xcodeproj",
         "identifier" : "C96D9E8E2E4795560091BDAA",
