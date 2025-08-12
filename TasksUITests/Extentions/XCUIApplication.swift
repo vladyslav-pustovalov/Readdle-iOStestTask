@@ -25,32 +25,31 @@ extension XCUIApplication {
         }
         
         let appIcon = springboard.icons[appName].firstMatch
-        
         if appIcon.waitForExistence(timeout: Constants.defaultTimeout) {
             appIcon.press(forDuration: 1.3)
         } else {
             XCTFail("Failed to find app icon named \(appName)")
         }
         
-        let removeAppButton = springboard.buttons["Remove App"]
-            if removeAppButton.waitForExistence(timeout: timeout) {
-                removeAppButton.tap()
-            } else {
-                XCTFail("Failed to find 'Remove App'")
-            }
-
-            let deleteAppButton = springboard.alerts.buttons["Delete App"]
-            if deleteAppButton.waitForExistence(timeout: timeout) {
-                deleteAppButton.tap()
-            } else {
-                XCTFail("Failed to find 'Delete App'")
-            }
-
-            let finalDeleteButton = springboard.alerts.buttons["Delete"]
-            if finalDeleteButton.waitForExistence(timeout: timeout) {
-                finalDeleteButton.tap()
-            } else {
-                XCTFail("Failed to find 'Delete'")
-            }
+        let removeAppButton: Button = springboard.buttons["Remove App"].build()
+        if removeAppButton.element.waitForExistence(timeout: timeout) {
+            removeAppButton.tap()
+        } else {
+            XCTFail("Failed to find 'Remove App'")
+        }
+        
+        let deleteAppButton: Button = springboard.alerts.buttons["Delete App"].build()
+        if deleteAppButton.element.waitForExistence(timeout: timeout) {
+            deleteAppButton.tap()
+        } else {
+            XCTFail("Failed to find 'Delete App'")
+        }
+        
+        let finalDeleteButton: Button = springboard.alerts.buttons["Delete"].build()
+        if finalDeleteButton.element.waitForExistence(timeout: timeout) {
+            finalDeleteButton.tap()
+        } else {
+            XCTFail("Failed to find 'Delete'")
+        }
     }
 }
